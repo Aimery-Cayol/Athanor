@@ -17,6 +17,7 @@
 
 
 
+ @import "bootstrap";
 
  @charset "UTF-8";
 /*!
@@ -10403,3 +10404,7 @@ body {
 }
 
 
+.blog-image {
+  height: 1rem;
+  width: 3rem;
+}

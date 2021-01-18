@@ -1,2 +1,94 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+
+
+        <title>Athanor</title>
+        <link rel="icon" type="image/x-icon" href="/Users/aimery/Desktop/THP/J5/good/assets/img/Iconsmind-Outline-Tree-22.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/stylesheets/application.css" rel="stylesheet" />
+
+
+    </head>
+
+
+
+    <body id="page-top">
+
+
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#about">À propos</a></li>
+                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#projects">Projets</a></li>
+                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">fangorn</h1>
+                    <hr>
+                    <hr>
+                    <h3 class="text-white-50 mx-auto mt-2 mb-5">Déclin des scieries francaises : l'arbre qui cache la forêt ?</h3>
+                </div>
+            </div>
+        </header>
+
+
+          <section class="projects-section bg-light" id="projects">
+            <div class="container">
+                <!-- Featured Project Row-->
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="brouillard.jpg" alt="" /></div>
+                        <div class="featured-text text-center text-lg-left">
+                            <h4 class="text-black-50 mb-0">Quelle place pour la scierie dans la filière Forêt-Bois française ? </h4>
+                            <hr>
+                            <p> Avant qu’un chêne de la forêt normande ne devienne un élément de votre mobilier quotidien aussi esthétique qu’écologique (1m3 de bois séquestre 1 tonne de CO2), un certain nombre d’acteurs essentielles doivent intervenir pour assurer la métamorphose de cette matière première en un bien de consommation durable.</p>
+            
+                            <p> Parmi eux, un maillon clé à l’utilisation du bois comme outil de substitution aux matériaux énergivores est le secteur de la scierie. Intermédiaire essentielle entre l’aval et l’amont de la filière Forêt-Bois, la scierie française pèse à elle seule 44 000 emplois en 2017 pour 2,5 Md€ de valeur ajoutée.</p>
+                            <p>La France compte aujourd'hui un peu moins de 1.500 établissements concentrés surtout dans les grandes régions forestières (Landes, Jura), et sont donc un vrai réservoir d'emploi dans des zones particulièrement rurales. </p>
+                            <p>L’activité des scieries est particulièrement concentrée. Ainsi entreprises qui scient plus de 20.000 m3 par an (6 % des effectifs) augmentent leur part de marché de 48% à 57% entre 2011 et 2019 (Figure 1). À l’opposé, les unités sciant moins de 2 000 m3 par an (57 % des effectifs) ne produisent que 5 % des sciages de France métropolitaine en 2019. </p>
+                            <center>
+                            <%= link_to image_tag("repartition.png"), class: "img-fluid"%> 
+                            <p><em>Figure 1 : Répartition des scieries françaises selon leurs capacités de production.</em></p>
+                            <img class="img-fluid" src="app/assets/images/repartition.png" alt="" />
+                            </center>
+                        
+                        </div>
+                    </div>
+                </div>
