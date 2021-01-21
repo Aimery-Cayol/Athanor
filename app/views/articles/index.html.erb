@@ -15,6 +15,22 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
 
+<script type="text/javascript" src="jquery-4.4.0.js"></script>
+
+
+<!--PERSONAL SCRIPT JavaScript-->
+<script type="text/javascript">
+      $(function () {
+        $(document).scroll(function () {
+            var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+</script>
+
+
+
 
 
         <title>Athanor</title>
@@ -27,7 +43,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/stylesheets/application.css" rel="stylesheet" />
+        <link href="app/assets/stylesheets/application.scss" rel="stylesheet" />
 
 
     </head>
@@ -39,7 +55,7 @@
 
 
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav class="navbar-fixed-top navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +65,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#about">À propos</a></li>
-                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#projects">Projets</a></li>
+                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#projects">Articles</a></li>
                         <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#signup">Contact</a></li>
                     </ul>
                 </div>
@@ -85,26 +101,17 @@
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
             <div class="container">
-                <!-- Featured Project Row-->
-                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="brouillard.jpg" alt="" /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>Scieries & industrie de première transformation</h4>
-                            <p class="text-black-50 mb-0">Déclin des scieries francaises : l'arbre qui cache la forêt ?</p>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Project One Row-->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6"><img class="img-fluid" src="aboutt.jpg" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="../aboutt.jpg" alt="" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4>
-                                    <%= link_to "Vente de forêt", "/articles/show", class: "text-white" %></h4>
-                                    <p class="mb-0 text-white-50">En nous appuyant sur les relevés faits dans votre forêt et nos bases de données, nous réalisons des analyses et des estimations précises de votre forêt.</p>
+                                    <%= link_to "Scieries & industrie de première transformation", "/articles/show", class: "text-white" %></h4>
+                                    <p class="mb-0 text-white-50">Déclin des scieries francaises : l'arbre qui cache la forêt ?</p>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
@@ -113,7 +120,7 @@
                 </div>
                 <!-- Project Two Row-->
                 <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-6"><img class="img-fluid" src="abouttree.png" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="../abouttree.png" alt="" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -126,8 +133,26 @@
                         </div>
                     </div>
                 </div>
+                <!-- Project three Row-->
+
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="../aboutt.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4>
+                                    <%= link_to "Scieries & industrie de première transformation", "/articles/show", class: "text-white" %></h4>
+                                    <p class="mb-0 text-white-50">Déclin des scieries francaises : l'arbre qui cache la forêt ?</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
         <!-- Signup-->
         <section class="signup-section" id="signup">
             <div class="container">
@@ -135,10 +160,13 @@
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Ne ratez pas notre prochain article ! Abonnez-vous à notre newsletter :</h2>
-                        <form class="form-inline d-flex">
-                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Entrer l'adresse mail..." />
+
+                        <form action= <%= usercrea_path %> method="POST" class="form-inline d-flex">
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" name="gossip_text" type="email" placeholder="Entrez votre adresse mail..." />
                             <button class="btn btn-primary mx-auto" type="submit">S'inscrire</button>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -193,6 +221,6 @@
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
-        <script src="script.js"></script>
+        <script src="app/assets/javascripts/material/scripts.js"></script>
     </body>
 </html>

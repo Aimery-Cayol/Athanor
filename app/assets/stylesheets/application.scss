@@ -12,10 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+
  */
 
 
 
+// Twitter Boostrap
 
  @import "bootstrap";
 
@@ -4077,6 +4080,13 @@ font-size: 14px;
 }
 .tab-content > .active {
   display: block;
+}
+
+
+.navibob {
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .navbar {
@@ -10273,7 +10283,6 @@ body {
           background-clip: text;
 }
 .masthead h2 {
-  max-width: 20rem;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
@@ -10293,7 +10302,6 @@ body {
     letter-spacing: 0.8rem;
   }
   .masthead h2 {
-    max-width: 30rem;
     font-size: 1.25rem;
   }
 }
@@ -10407,4 +10415,15 @@ body {
 .blog-image {
   height: 1rem;
   width: 3rem;
+}
+
+
+.navbar-fixed-top.scrolled {
+  background-color: #000000 !important;
+  transition: background-color 200ms linear;
+  color: gray !important;
+}
+
+.navbar-fixed-top.scrolled .nav-link {
+  color:#555;
 }

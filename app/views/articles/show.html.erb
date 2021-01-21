@@ -27,7 +27,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/stylesheets/application.css" rel="stylesheet" />
+        <link href="/stylesheets/application.scss" rel="stylesheet" />
 
 
     </head>
@@ -48,9 +48,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#about">À propos</a></li>
-                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#projects">Projets</a></li>
-                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="index">À propos</a></li>
+                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="index">Articles</a></li>
+                        <li class="nav-item"><a class="centrenav nav-link js-scroll-trigger" href="index">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,10 +61,9 @@
         <header class="masthead">
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">fangorn</h1>
-                    <hr>
-                    <hr>
-                    <h3 class="text-white-50 mx-auto mt-2 mb-5">Déclin des scieries francaises : l'arbre qui cache la forêt ?</h3>
+                    
+
+                    <h2 class="text-white-50" style="font-size:40px">Déclin des scieries francaises : l'arbre qui cache la forêt ?</h2>
                 </div>
             </div>
         </header>
@@ -83,12 +82,79 @@
                             <p> Parmi eux, un maillon clé à l’utilisation du bois comme outil de substitution aux matériaux énergivores est le secteur de la scierie. Intermédiaire essentielle entre l’aval et l’amont de la filière Forêt-Bois, la scierie française pèse à elle seule 44 000 emplois en 2017 pour 2,5 Md€ de valeur ajoutée.</p>
                             <p>La France compte aujourd'hui un peu moins de 1.500 établissements concentrés surtout dans les grandes régions forestières (Landes, Jura), et sont donc un vrai réservoir d'emploi dans des zones particulièrement rurales. </p>
                             <p>L’activité des scieries est particulièrement concentrée. Ainsi entreprises qui scient plus de 20.000 m3 par an (6 % des effectifs) augmentent leur part de marché de 48% à 57% entre 2011 et 2019 (Figure 1). À l’opposé, les unités sciant moins de 2 000 m3 par an (57 % des effectifs) ne produisent que 5 % des sciages de France métropolitaine en 2019. </p>
+                            <br/>
                             <center>
-                            <%= link_to image_tag("repartition.png"), class: "img-fluid"%> 
+                            <img
+                                src="../repartition.png"
+                                height="350px"
+                                width="350px"
+                            />
                             <p><em>Figure 1 : Répartition des scieries françaises selon leurs capacités de production.</em></p>
-                            <img class="img-fluid" src="app/assets/images/repartition.png" alt="" />
                             </center>
-                        
+                            <br/>
+                            <p>Ces chiffres ne doivent pas cacher la réalité d’un secteur en qui peine de plus en plus à assumer son rôle. </p>
+                            <br/>
+
+                            <h4 class="text-black-50 mb-0">Le constat : une scierie française en perte de vitesse.  </h4>
+                            <hr>
+                            <p>On estime que 80 scieries mettent la clé sous la porte tous les ans, alors que très peu de nouvelles entreprises assurent le renouvellement de l’industrie. Comment une telle érosion est-elle possible ? Comment se fait-il qu’avec une surface forestière inférieure de 45%, l’Allemagne dispose d’une production de sciages plus de deux fois supérieure à la France (23 Mm3) ? </p>
+                            <p>Dans ces conditions, la balance commerciale du secteur est évidemment dans le rouge (Figure 2) car l’aval de la filière, lui, est toujours plus demandeur de bois d'œuvre et d’industrie. </p>
+                            <br/>
+                            <center>
+                            <img
+                                src="../balance.png"
+                                height="250px"
+                                width="800px"
+                            />
+                            <p><em>Figure 2 : Une balance commerciale une nouvelle fois déficitaire.</em></p>
+                            </center>
+                            <br/>
+
+                            <h4 class="text-black-50 mb-0">L'origine de cette perte de vitesse : une combinaison de facteurs strucurels et conjoncturels.  </h4>
+                            <hr>
+                            <p>Il y a d’abord le fameux <b>« paradoxe français »</b> qui peut se résumer ainsi : 80% des sciages nationaux concernent les résineux (épicéas, pins, etc.) comme l’illustre la Figure 3, alors que la forêt française est constituée à 75 % de feuillus (chêne, hêtre, etc.). Cette désagréable situation admet plusieurs fondements : </p>
+                            <ul>
+                                <li>Le décalage entre la nature de la ressource métropolitaine (feuillus) et les demandes de l'industrie de la construction (résineux). </li>
+                                <li>L’industrie de transformation ne paraît n’est plus adaptée aux feuillus.</li>
+                                <li>L’offre compétitive de sciages résineux provenant d’autres pays européens pousse à l’importation. </li>
+                            </ul>
+                            <p>Mais ce paradoxe n’est malheureusement pas le seul fondement du mal être de la scierie française, qui voit s’ajouter à cette difficulté conjoncturelle des blocages de l’ordre du structurel.</p>
+                            <dl>
+                                <dd>- La <b>faible structuration</b> du tissu industriel constitué de PME, tournées historiquement vers leur approvisionnement en amont plutôt que vers leurs clients, est peu propice aux partenariats collaboratifs entre l’amont et l’aval. </dd>
+                                <dd>- Le <b>sous-investissement</b> chronique du secteur induit un matériel vieillissant voire dépassé technologiquement et normativement chez certains producteurs. N’oublions pas que dans cette industrie l’équipement productif par salarié est particulièrement élevé : 159.000 euros pour un salarié du résineux, 127.000 euros pour un salarié du feuillus. </dd>
+                                <dd>- De graves <b>problèmes d’approvisionnement</b> soulignent l’insuffisance des prélèvements ainsi que la difficulté d’acquisition de la matière première. Le chêne, notamment, fait l’objet d’un véritable “fuitage” tant il est trusté par de gros investisseurs asiatiques. </dd>
+                                <dd>- L’<b>offre de produits intermédiaires</b> dans le domaine du bois construction est insuffisante. Le CLT par exemple, matériau de construction en bois lamellé contre-croisé est pour l’essentiel importés (Autriche, Allemagne) car seules sept entreprises françaises en fabriquent alors qu’il est cinq fois plus léger que le béton, douze fois plus isolant, résistant au feu, il piège du carbone et peut être fabriqué en bois résineux ou feuillus. </dd>
+                            </dl>
+                            <br/>
+                            <center>
+                            <img
+                                src="../sciages.png"
+                                height="400px"
+                                width="400px"
+                            />
+                            <p><em>Figure 3 : Répartitions des essences transformées dans les scieries françaises. </em></p>
+                            </center>
+                            <br/>
+                            
+                            <h4 class="text-black-50 mb-0">Conclusion : comment atteindre l’objectif de 10Mm3 de sciages en 2025 ? </h4>
+                            <hr>
+                            <p>Il faudrait d’abord <b>augmenter technologiquement les volumes</b>. La production de sciage évolue parallèlement à la modernisation du matériel : la production volumétrique d’une scierie dépendra donc avant tout de sa capacité à investir. La scierie du futur devra donc davantage encore s’automatiser pour pouvoir doubler en capacité de production, et aura pour ce faire  besoin d’intelligence artificielle.  </p>
+                            <p>Il convient également <b>d’augmenter l’accessibilité à la ressource</b>. Le plus grand potentiel de croissance de récolte se trouve dans les forêts privées, et tout particulièrement dans les propriétés hors plan simple de gestion, inférieures à 25 ha. Il s’agira donc de dynamiser la gestion forestière et de regrouper le foncier afin d’amener les propriétaires à mettre sur le marché de lots de bois.  </p>
+                            <p>Beaucoup de volumes disponibles sont situés dans des massifs avec des difficultés de relief et d’accès, et sont largement composés d’essences et de diamètres peu demandés : gros ré- sineux, sapin, feuillus divers … La ressource en chêne est insuffisante, alors qu’il y aurait du hêtre disponible, mais il faut recréer un marché pour cette essence. Il y a donc urgence à faire progresser la <b>part de marché du bois dans ses différents usages</b>. </p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <h5 class="text-black-50 mb-0">Sources :</h5>
+                                <ul>
+                                    <li>https://www.ccomptes.fr/system/files/2020-05/20200525-rapport-58-2-structuration-filiere-foret-bois.pdf
+                                    <li>https://hal.univ-lorraine.fr/tel-01750611/document
+                                    <li>http://documents.irevues.inist.fr/bitstream/handle/2042/65339/RFF_2017_69_3_241_248_ballu.pdf?sequence=1
+                                    <li>https://agreste.agriculture.gouv.fr/agreste-web/download/publication/publie/GraFra2020Chap8.2/Graf2032%20-%20Bois%20-%20Prix,%20Commerce%20ext..pdf</li>
+                                    <li>http://chalayer-scierie.chez-alice.fr/pdf/2019/Dossier%20scierie%202025%20Bois%20int..pdf</li>
+                                    <li>https://agreste.agriculture.gouv.fr/agreste-web/download/publication/publie/GraFra2020Chap8.1/Graf2031%20-%20Bois%20-%20R%C3%A9colte,%20production.pdf</li>
+
+                                </ul>
                         </div>
                     </div>
                 </div>

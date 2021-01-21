@@ -67,3 +67,7 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 
 gem 'friendly_id', '~> 5.4.0'
  
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+
+gem 'popper_js'

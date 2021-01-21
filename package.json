@@ -1,5 +1,8 @@
 {
   "name": "Athanor",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-sass": "^3.4.1"
+  }
 }
